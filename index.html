@@ -10,7 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="stylesheet" href="./assets/styles/index.css" />
   </head>
   <body>
     <header class="d-flex flex-column align-items-center bg-black">
@@ -20,13 +20,18 @@
         alt=""
       />
       <h1 class="text-light">The Library</h1>
+      <audio class="invisible" controls autoplay>
+        <source
+          src="./assets/music/Lobby - Library of Ruina OST.mp3"
+          type="audio/ogg"
+        />
+        Your browser does not support the audio element.
+      </audio>
     </header>
     <main class="bg-black">
       <h2 class="text-white p-3">Books Of The Day</h2>
       <div class="container">
-        <div id="card-area" class="row">
-          </div>
-        </div>
+        <div id="card-area" class="row"></div>
       </div>
     </main>
     <script

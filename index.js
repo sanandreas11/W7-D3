@@ -12,7 +12,6 @@ const getBooks = function () {
       console.log("Books of the day", books)
 
       const cardPosition = document.getElementById("card-area")
-      cardPosition.innerHTML = "" // Clears previous content
 
       books.forEach((book) => {
         const cards = document.createElement("div")
@@ -24,14 +23,13 @@ const getBooks = function () {
               <div class="card-body bg-dark">
                 <h5 class="card-title text-white">${book.title}</h5>
                 <p class="card-text text-white">${book.price} €</p>
-                <a href="#" class="btn btn-outline-danger delete-button">Scarta</a>
+                <a href="#" class="btn btn-outline-danger delete-button">Burn Book</a>
               </div>
             </div>`
 
         // Append the card to the container
         cardPosition.appendChild(cards)
 
-        // Attach event listener to the "Scarta" button
         const deleteButton = cards.querySelector(".delete-button")
         deleteButton.addEventListener("click", (event) => {
           event.preventDefault()
